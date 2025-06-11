@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a9eb0ca9d6beb2c7377eb5a9d754a524 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a9eb0ca9d6beb2c7377eb5a9d754a524" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a9eb0ca9d6beb2c7377eb5a9d754a524 = L.map(
+                "map_a9eb0ca9d6beb2c7377eb5a9d754a524",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_83bbd545f5221dbb691399c04ea4a548 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_83bbd545f5221dbb691399c04ea4a548.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+            var tile_layer_a9891b3715a0a60a878febd14e9145f3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a9891b3715a0a60a878febd14e9145f3.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+            var tile_layer_606d7ea11e7811f96c844594e94e20e2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_606d7ea11e7811f96c844594e94e20e2.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+            var tile_layer_c1c7f9f582cf3eec0b184f4a77e40675 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c1c7f9f582cf3eec0b184f4a77e40675.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+    var color_map_c855a26bb7883d0459284c364c9df6e9 = {};
+
+    
+    color_map_c855a26bb7883d0459284c364c9df6e9.color = d3.scale.threshold()
+              .domain([25.529516921348595, 25.600865801549237, 25.672214681749878, 25.74356356195052, 25.81491244215116, 25.8862613223518, 25.95761020255244, 26.028959082753083, 26.100307962953725, 26.171656843154366, 26.243005723355008, 26.31435460355565, 26.38570348375629, 26.45705236395693, 26.52840124415757, 26.599750124358213, 26.671099004558855, 26.742447884759496, 26.813796764960138, 26.88514564516078, 26.95649452536142, 27.027843405562063, 27.0991922857627, 27.170541165963343, 27.241890046163984, 27.313238926364626, 27.384587806565268, 27.45593668676591, 27.52728556696655, 27.598634447167193, 27.66998332736783, 27.741332207568473, 27.812681087769114, 27.884029967969756, 27.955378848170398, 28.02672772837104, 28.09807660857168, 28.169425488772323, 28.240774368972964, 28.312123249173602, 28.383472129374244, 28.454821009574886, 28.526169889775527, 28.59751876997617, 28.66886765017681, 28.740216530377452, 28.81156541057809, 28.882914290778732, 28.954263170979374, 29.025612051180016, 29.096960931380657, 29.1683098115813, 29.23965869178194, 29.311007571982582, 29.382356452183224, 29.453705332383862, 29.525054212584504, 29.596403092785145, 29.667751972985787, 29.73910085318643, 29.81044973338707, 29.881798613587712, 29.953147493788354, 30.024496373988995, 30.095845254189634, 30.167194134390275, 30.238543014590917, 30.30989189479156, 30.3812407749922, 30.452589655192842, 30.523938535393484, 30.595287415594125, 30.666636295794767, 30.737985175995405, 30.809334056196047, 30.88068293639669, 30.95203181659733, 31.02338069679797, 31.094729576998613, 31.166078457199255, 31.237427337399893, 31.308776217600535, 31.380125097801177, 31.451473978001818, 31.52282285820246, 31.5941717384031, 31.665520618603743, 31.736869498804385, 31.808218379005027, 31.879567259205665, 31.950916139406306, 32.02226501960695, 32.09361389980759, 32.16496278000823, 32.23631166020887, 32.307660540409515, 32.37900942061015, 32.4503583008108, 32.521707181011436, 32.59305606121208, 32.66440494141272, 32.73575382161336, 32.807102701814, 32.87845158201464, 32.949800462215286, 33.021149342415924, 33.09249822261657, 33.16384710281721, 33.235195983017846, 33.30654486321849, 33.377893743419136, 33.449242623619774, 33.52059150382041, 33.59194038402106, 33.663289264221696, 33.73463814442234, 33.80598702462298, 33.877335904823624, 33.94868478502426, 34.0200336652249, 34.091382545425546, 34.162731425626184, 34.23408030582683, 34.30542918602747, 34.37677806622811, 34.44812694642875, 34.51947582662939, 34.590824706830034, 34.66217358703068, 34.73352246723132, 34.804871347431956, 34.8762202276326, 34.94756910783324, 35.018917988033884, 35.09026686823452, 35.16161574843517, 35.232964628635806, 35.304313508836444, 35.37566238903709, 35.44701126923773, 35.518360149438365, 35.58970902963901, 35.661057909839656, 35.732406790040294, 35.80375567024093, 35.87510455044158, 35.94645343064222, 36.01780231084286, 36.0891511910435, 36.160500071244144, 36.23184895144478, 36.30319783164542, 36.374546711846065, 36.4458955920467, 36.51724447224735, 36.58859335244799, 36.65994223264863, 36.73129111284927, 36.80263999304991, 36.87398887325055, 36.9453377534512, 37.01668663365184, 37.088035513852475, 37.15938439405312, 37.23073327425376, 37.3020821544544, 37.37343103465504, 37.44477991485569, 37.516128795056325, 37.58747767525696, 37.65882655545761, 37.730175435658246, 37.80152431585889, 37.87287319605953, 37.944222076260175, 38.01557095646081, 38.08691983666146, 38.158268716862096, 38.22961759706274, 38.30096647726338, 38.37231535746402, 38.44366423766466, 38.5150131178653, 38.58636199806595, 38.657710878266585, 38.72905975846723, 38.80040863866787, 38.871757518868506, 38.94310639906915, 39.01445527926979, 39.085804159470435, 39.15715303967107, 39.22850191987172, 39.299850800072356, 39.371199680273, 39.44254856047364, 39.513897440674285, 39.58524632087492, 39.65659520107556, 39.727944081276206, 39.799292961476844, 39.87064184167748, 39.94199072187813, 40.01333960207877, 40.08468848227941, 40.15603736248005, 40.227386242680694, 40.29873512288133, 40.37008400308198, 40.441432883282616, 40.51278176348326, 40.5841306436839, 40.65547952388454, 40.72682840408518, 40.79817728428582, 40.869526164486466, 40.940875044687104, 41.01222392488775, 41.08357280508839, 41.154921685289025, 41.22627056548967, 41.297619445690316, 41.368968325890954, 41.44031720609159, 41.51166608629224, 41.583014966492875, 41.65436384669351, 41.72571272689416, 41.797061607094804, 41.86841048729544, 41.93975936749608, 42.011108247696725, 42.08245712789737, 42.153806008098, 42.22515488829865, 42.29650376849929, 42.36785264869993, 42.43920152890057, 42.510550409101214, 42.58189928930186, 42.6532481695025, 42.724597049703135, 42.79594592990378, 42.86729481010442, 42.93864369030506, 43.0099925705057, 43.08134145070635, 43.152690330906985, 43.22403921110762, 43.29538809130827, 43.36673697150891, 43.438085851709545, 43.50943473191019, 43.580783612110835, 43.652132492311466, 43.72348137251211, 43.79483025271276, 43.8661791329134, 43.93752801311404, 44.00887689331468, 44.08022577351532, 44.15157465371596, 44.2229235339166, 44.294272414117245, 44.36562129431789, 44.43697017451853, 44.508319054719166, 44.57966793491981, 44.65101681512045, 44.72236569532109, 44.79371457552173, 44.86506345572238, 44.936412335923016, 45.007761216123654, 45.0791100963243, 45.150458976524945, 45.221807856725576, 45.29315673692622, 45.364505617126866, 45.435854497327504, 45.50720337752814, 45.57855225772879, 45.64990113792943, 45.72125001813007, 45.79259889833071, 45.863947778531355, 45.93529665873199, 46.00664553893263, 46.077994419133276, 46.149343299333914, 46.22069217953456, 46.2920410597352, 46.36338993993584, 46.43473882013648, 46.50608770033712, 46.577436580537764, 46.64878546073841, 46.72013434093905, 46.791483221139686, 46.86283210134033, 46.934180981540976, 47.005529861741614, 47.07687874194225, 47.1482276221429, 47.219576502343536, 47.290925382544174, 47.36227426274482, 47.43362314294546, 47.5049720231461, 47.57632090334674, 47.647669783547386, 47.719018663748024, 47.79036754394866, 47.86171642414931, 47.93306530434995, 48.00441418455058, 48.07576306475123, 48.147111944951874, 48.21846082515252, 48.28980970535315, 48.361158585553795, 48.43250746575444, 48.50385634595508, 48.57520522615572, 48.64655410635636, 48.717902986557, 48.789251866757645, 48.86060074695828, 48.93194962715893, 49.00329850735957, 49.074647387560205, 49.14599626776085, 49.21734514796149, 49.288694028162126, 49.36004290836277, 49.43139178856342, 49.50274066876406, 49.57408954896469, 49.64543842916534, 49.716787309365984, 49.78813618956662, 49.85948506976726, 49.930833949967905, 50.00218283016854, 50.07353171036919, 50.14488059056983, 50.21622947077047, 50.28757835097111, 50.35892723117175, 50.43027611137239, 50.50162499157303, 50.57297387177367, 50.644322751974315, 50.71567163217496, 50.7870205123756, 50.858369392576236, 50.92971827277688, 51.00106715297753, 51.07241603317816, 51.1437649133788, 51.21511379357945, 51.28646267378009, 51.35781155398073, 51.42916043418137, 51.500509314382015, 51.57185819458265, 51.64320707478329, 51.714555954983936, 51.785904835184574, 51.85725371538521, 51.92860259558586, 51.9999514757865, 52.07130035598714, 52.14264923618778, 52.213998116388424, 52.28534699658907, 52.3566958767897, 52.428044756990346, 52.49939363719099, 52.570742517391636, 52.64209139759227, 52.71344027779291, 52.78478915799356, 52.856138038194196, 52.927486918394834, 52.99883579859548, 53.07018467879612, 53.141533558996755, 53.2128824391974, 53.284231319398046, 53.355580199598684, 53.42692907979932, 53.49827795999997, 53.569626840200605, 53.640975720401244, 53.71232460060189, 53.783673480802534, 53.85502236100318, 53.92637124120381, 53.997720121404456, 54.0690690016051, 54.14041788180574, 54.21176676200638, 54.28311564220702, 54.35446452240766, 54.4258134026083, 54.497162282808944, 54.56851116300959, 54.63986004321023, 54.711208923410865, 54.78255780361151, 54.85390668381215, 54.92525556401279, 54.99660444421343, 55.06795332441408, 55.139302204614715, 55.21065108481535, 55.281999965016, 55.353348845216644, 55.424697725417275, 55.49604660561792, 55.567395485818565, 55.6387443660192, 55.71009324621984, 55.78144212642049, 55.85279100662113, 55.92413988682177, 55.99548876702241, 56.06683764722305, 56.13818652742369, 56.20953540762433, 56.280884287824975, 56.35223316802561, 56.42358204822626, 56.494930928426896, 56.56627980862754, 56.63762868882819, 56.70897756902882, 56.78032644922946, 56.85167532943011, 56.923024209630746, 56.994373089831385, 57.06572197003203, 57.137070850232675, 57.20841973043331, 57.27976861063395, 57.351117490834596, 57.422466371035235, 57.49381525123587, 57.56516413143652, 57.636513011637156, 57.7078618918378, 57.77921077203844, 57.850559652239085, 57.92190853243972, 57.99325741264037, 58.064606292841006, 58.13595517304165, 58.20730405324229, 58.27865293344293, 58.35000181364357, 58.42135069384421, 58.492699574044856, 58.564048454245494, 58.63539733444614, 58.70674621464678, 58.778095094847416, 58.84944397504806, 58.9207928552487, 58.992141735449344, 59.06349061564998, 59.13483949585063, 59.206188376051266, 59.277537256251904, 59.34888613645255, 59.42023501665319, 59.49158389685383, 59.56293277705447, 59.634281657255116, 59.705630537455754, 59.7769794176564, 59.848328297857044, 59.919677178057675, 59.99102605825832, 60.06237493845896, 60.133723818659604, 60.20507269886024, 60.27642157906089, 60.347770459261525, 60.41911933946217, 60.490468219662816, 60.56181709986345, 60.63316598006409, 60.70451486026473, 60.775863740465375, 60.84721262066601, 60.91856150086666, 60.9899103810673, 61.06125926126794, 61.13260814146857])
+              .range(['#ff0000ff', '#ff0100ff', '#ff0200ff', '#ff0300ff', '#ff0400ff', '#ff0500ff', '#ff0600ff', '#ff0700ff', '#ff0800ff', '#ff0900ff', '#ff0a00ff', '#ff0b00ff', '#ff0c00ff', '#ff0d00ff', '#ff0e00ff', '#ff0f00ff', '#ff1000ff', '#ff1100ff', '#ff1200ff', '#ff1300ff', '#ff1400ff', '#ff1500ff', '#ff1600ff', '#ff1700ff', '#ff1800ff', '#ff1900ff', '#ff1a00ff', '#ff1b00ff', '#ff1c00ff', '#ff1d00ff', '#ff1e00ff', '#ff1f00ff', '#ff2000ff', '#ff2100ff', '#ff2200ff', '#ff2300ff', '#ff2400ff', '#ff2500ff', '#ff2600ff', '#ff2800ff', '#ff2900ff', '#ff2a00ff', '#ff2b00ff', '#ff2c00ff', '#ff2d00ff', '#ff2e00ff', '#ff2f00ff', '#ff3000ff', '#ff3100ff', '#ff3200ff', '#ff3300ff', '#ff3400ff', '#ff3500ff', '#ff3600ff', '#ff3700ff', '#ff3800ff', '#ff3900ff', '#ff3a00ff', '#ff3b00ff', '#ff3c00ff', '#ff3d00ff', '#ff3e00ff', '#ff3f00ff', '#ff4000ff', '#ff4100ff', '#ff4200ff', '#ff4300ff', '#ff4400ff', '#ff4500ff', '#ff4600ff', '#ff4700ff', '#ff4800ff', '#ff4900ff', '#ff4a00ff', '#ff4b00ff', '#ff4c00ff', '#ff4d00ff', '#ff4f00ff', '#ff5000ff', '#ff5100ff', '#ff5200ff', '#ff5300ff', '#ff5400ff', '#ff5500ff', '#ff5600ff', '#ff5700ff', '#ff5800ff', '#ff5900ff', '#ff5a00ff', '#ff5b00ff', '#ff5c00ff', '#ff5d00ff', '#ff5e00ff', '#ff5f00ff', '#ff6000ff', '#ff6100ff', '#ff6200ff', '#ff6300ff', '#ff6400ff', '#ff6500ff', '#ff6600ff', '#ff6700ff', '#ff6800ff', '#ff6900ff', '#ff6a00ff', '#ff6b00ff', '#ff6c00ff', '#ff6d00ff', '#ff6e00ff', '#ff6f00ff', '#ff7000ff', '#ff7100ff', '#ff7200ff', '#ff7300ff', '#ff7400ff', '#ff7500ff', '#ff7700ff', '#ff7800ff', '#ff7900ff', '#ff7a00ff', '#ff7b00ff', '#ff7c00ff', '#ff7d00ff', '#ff7e00ff', '#ff7f00ff', '#ff8000ff', '#ff8100ff', '#ff8200ff', '#ff8300ff', '#ff8400ff', '#ff8500ff', '#ff8600ff', '#ff8700ff', '#ff8800ff', '#ff8900ff', '#ff8a00ff', '#ff8b00ff', '#ff8c00ff', '#ff8d00ff', '#ff8e00ff', '#ff8f00ff', '#ff9000ff', '#ff9100ff', '#ff9200ff', '#ff9300ff', '#ff9400ff', '#ff9500ff', '#ff9600ff', '#ff9700ff', '#ff9800ff', '#ff9900ff', '#ff9a00ff', '#ff9b00ff', '#ff9c00ff', '#ff9e00ff', '#ff9f00ff', '#ffa000ff', '#ffa100ff', '#ffa200ff', '#ffa300ff', '#ffa400ff', '#ffa500ff', '#ffa600ff', '#ffa700ff', '#ffa800ff', '#ffa900ff', '#ffaa00ff', '#ffab00ff', '#ffac00ff', '#ffad00ff', '#ffae00ff', '#ffaf00ff', '#ffb000ff', '#ffb100ff', '#ffb200ff', '#ffb300ff', '#ffb400ff', '#ffb500ff', '#ffb600ff', '#ffb700ff', '#ffb800ff', '#ffb900ff', '#ffba00ff', '#ffbb00ff', '#ffbc00ff', '#ffbd00ff', '#ffbe00ff', '#ffbf00ff', '#ffc000ff', '#ffc100ff', '#ffc200ff', '#ffc300ff', '#ffc500ff', '#ffc600ff', '#ffc700ff', '#ffc800ff', '#ffc900ff', '#ffca00ff', '#ffcb00ff', '#ffcc00ff', '#ffcd00ff', '#ffce00ff', '#ffcf00ff', '#ffd000ff', '#ffd100ff', '#ffd200ff', '#ffd300ff', '#ffd400ff', '#ffd500ff', '#ffd600ff', '#ffd700ff', '#ffd800ff', '#ffd900ff', '#ffda00ff', '#ffdb00ff', '#ffdc00ff', '#ffdd00ff', '#ffde00ff', '#ffdf00ff', '#ffe000ff', '#ffe100ff', '#ffe200ff', '#ffe300ff', '#ffe400ff', '#ffe500ff', '#ffe600ff', '#ffe700ff', '#ffe800ff', '#ffe900ff', '#ffea00ff', '#ffeb00ff', '#ffed00ff', '#ffee00ff', '#ffef00ff', '#fff000ff', '#fff100ff', '#fff200ff', '#fff300ff', '#fff400ff', '#fff500ff', '#fff600ff', '#fff700ff', '#fff800ff', '#fff900ff', '#fffa00ff', '#fffb00ff', '#fffc00ff', '#fffd00ff', '#fffe00ff', '#ffff00ff', '#ffff00ff', '#feff00ff', '#fdfe00ff', '#fcfe00ff', '#fbfd00ff', '#fafd00ff', '#f9fc00ff', '#f8fc00ff', '#f7fb00ff', '#f6fb00ff', '#f5fa00ff', '#f4fa00ff', '#f3f900ff', '#f2f900ff', '#f1f800ff', '#f0f800ff', '#eff700ff', '#eef700ff', '#edf600ff', '#ebf600ff', '#eaf500ff', '#e9f500ff', '#e8f400ff', '#e7f300ff', '#e6f300ff', '#e5f200ff', '#e4f200ff', '#e3f100ff', '#e2f100ff', '#e1f000ff', '#e0f000ff', '#dfef00ff', '#deef00ff', '#ddee00ff', '#dcee00ff', '#dbed00ff', '#daed00ff', '#d9ec00ff', '#d8ec00ff', '#d7eb00ff', '#d6eb00ff', '#d5ea00ff', '#d4ea00ff', '#d3e900ff', '#d2e900ff', '#d1e800ff', '#d0e800ff', '#cfe700ff', '#cee700ff', '#cde600ff', '#cce600ff', '#cbe500ff', '#cae500ff', '#c9e400ff', '#c8e400ff', '#c7e300ff', '#c6e300ff', '#c5e200ff', '#c3e200ff', '#c2e100ff', '#c1e100ff', '#c0e000ff', '#bfe000ff', '#bedf00ff', '#bddf00ff', '#bcde00ff', '#bbde00ff', '#badd00ff', '#b9dc00ff', '#b8dc00ff', '#b7db00ff', '#b6db00ff', '#b5da00ff', '#b4da00ff', '#b3d900ff', '#b2d900ff', '#b1d800ff', '#b0d800ff', '#afd700ff', '#aed700ff', '#add600ff', '#acd600ff', '#abd500ff', '#aad500ff', '#a9d400ff', '#a8d400ff', '#a7d300ff', '#a6d300ff', '#a5d200ff', '#a4d200ff', '#a3d100ff', '#a2d100ff', '#a1d000ff', '#a0d000ff', '#9fcf00ff', '#9ecf00ff', '#9cce00ff', '#9bce00ff', '#9acd00ff', '#99cd00ff', '#98cc00ff', '#97cc00ff', '#96cb00ff', '#95cb00ff', '#94ca00ff', '#93ca00ff', '#92c900ff', '#91c900ff', '#90c800ff', '#8fc800ff', '#8ec700ff', '#8dc700ff', '#8cc600ff', '#8bc500ff', '#8ac500ff', '#89c400ff', '#88c400ff', '#87c300ff', '#86c300ff', '#85c200ff', '#84c200ff', '#83c100ff', '#82c100ff', '#81c000ff', '#80c000ff', '#7fbf00ff', '#7ebf00ff', '#7dbe00ff', '#7cbe00ff', '#7bbd00ff', '#7abd00ff', '#79bc00ff', '#78bc00ff', '#77bb00ff', '#75bb00ff', '#74ba00ff', '#73ba00ff', '#72b900ff', '#71b900ff', '#70b800ff', '#6fb800ff', '#6eb700ff', '#6db700ff', '#6cb600ff', '#6bb600ff', '#6ab500ff', '#69b500ff', '#68b400ff', '#67b400ff', '#66b300ff', '#65b300ff', '#64b200ff', '#63b200ff', '#62b100ff', '#61b100ff', '#60b000ff', '#5fb000ff', '#5eaf00ff', '#5daf00ff', '#5cae00ff', '#5bad00ff', '#5aad00ff', '#59ac00ff', '#58ac00ff', '#57ab00ff', '#56ab00ff', '#55aa00ff', '#54aa00ff', '#53a900ff', '#52a900ff', '#51a800ff', '#50a800ff', '#4fa700ff', '#4da700ff', '#4ca600ff', '#4ba600ff', '#4aa500ff', '#49a500ff', '#48a400ff', '#47a400ff', '#46a300ff', '#45a300ff', '#44a200ff', '#43a200ff', '#42a100ff', '#41a100ff', '#40a000ff', '#3fa000ff', '#3e9f00ff', '#3d9f00ff', '#3c9e00ff', '#3b9e00ff', '#3a9d00ff', '#399d00ff', '#389c00ff', '#379c00ff', '#369b00ff', '#359b00ff', '#349a00ff', '#339a00ff', '#329900ff', '#319900ff', '#309800ff', '#2f9800ff', '#2e9700ff', '#2d9600ff', '#2c9600ff', '#2b9500ff', '#2a9500ff', '#299400ff', '#289400ff', '#269300ff', '#259300ff', '#249200ff', '#239200ff', '#229100ff', '#219100ff', '#209000ff', '#1f9000ff', '#1e8f00ff', '#1d8f00ff', '#1c8e00ff', '#1b8e00ff', '#1a8d00ff', '#198d00ff', '#188c00ff', '#178c00ff', '#168b00ff', '#158b00ff', '#148a00ff', '#138a00ff', '#128900ff', '#118900ff', '#108800ff', '#0f8800ff', '#0e8700ff', '#0d8700ff', '#0c8600ff', '#0b8600ff', '#0a8500ff', '#098500ff', '#088400ff', '#078400ff', '#068300ff', '#058300ff', '#048200ff', '#038200ff', '#028100ff', '#018100ff', '#008000ff']);
+    
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.x = d3.scale.linear()
+              .domain([25.529516921348595, 61.13260814146857])
+              .range([0, 450 - 50]);
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.legend = L.control({position: 'topright'});
+    color_map_c855a26bb7883d0459284c364c9df6e9.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_c855a26bb7883d0459284c364c9df6e9.legend.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.xAxis = d3.svg.axis()
+        .scale(color_map_c855a26bb7883d0459284c364c9df6e9.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([25.529516921348595, 43.33106253140859, 61.13260814146858]);
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.g = color_map_c855a26bb7883d0459284c364c9df6e9.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.g.selectAll("rect")
+        .data(color_map_c855a26bb7883d0459284c364c9df6e9.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_c855a26bb7883d0459284c364c9df6e9.x(color_map_c855a26bb7883d0459284c364c9df6e9.color.domain()[i - 1]) : color_map_c855a26bb7883d0459284c364c9df6e9.x.range()[0],
+            x1: i < color_map_c855a26bb7883d0459284c364c9df6e9.color.domain().length ? color_map_c855a26bb7883d0459284c364c9df6e9.x(color_map_c855a26bb7883d0459284c364c9df6e9.color.domain()[i]) : color_map_c855a26bb7883d0459284c364c9df6e9.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_c855a26bb7883d0459284c364c9df6e9.g.call(color_map_c855a26bb7883d0459284c364c9df6e9.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Total Bikeability Score");
+    
+            var feature_group_11889b986486d520facd78fd2c2da336 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_93e2d716d474fc0aac2b51005f9157e1 = L.circleMarker(
+                [40.740288, -73.960697],
+                {"bubblingMouseEvents": true, "color": "#a1d100ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a1d100ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_a13aa80d0e592d98c8644ee42ee76553 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_6be390d5731cac883e7cbe024024cf59 = $(`<div id="html_6be390d5731cac883e7cbe024024cf59" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>6104.01</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>49.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>65.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>26.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>64.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>17.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>54.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 17.93 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 6.57 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 90.06 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_a13aa80d0e592d98c8644ee42ee76553.setContent(html_6be390d5731cac883e7cbe024024cf59);
+            
+        
+
+        circle_marker_93e2d716d474fc0aac2b51005f9157e1.bindPopup(popup_a13aa80d0e592d98c8644ee42ee76553)
+        ;
+
+        
+    
+    
+            circle_marker_93e2d716d474fc0aac2b51005f9157e1.bindTooltip(
+                `<div>
+                     6104.01 - Score: 49.9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31f26d75274f623b63e721fa57b997eb = L.circleMarker(
+                [40.745038, -73.957539],
+                {"bubblingMouseEvents": true, "color": "#8fc700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8fc700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_9785de89da3066095fe4537eb99d5a81 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7625aa43be33e558824d0fddee3c30c5 = $(`<div id="html_7625aa43be33e558824d0fddee3c30c5" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>6254.06</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>51.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>49.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>57.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>15.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>54.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 33.52 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 4.93 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 187.99 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_9785de89da3066095fe4537eb99d5a81.setContent(html_7625aa43be33e558824d0fddee3c30c5);
+            
+        
+
+        circle_marker_31f26d75274f623b63e721fa57b997eb.bindPopup(popup_9785de89da3066095fe4537eb99d5a81)
+        ;
+
+        
+    
+    
+            circle_marker_31f26d75274f623b63e721fa57b997eb.bindTooltip(
+                `<div>
+                     6254.06 - Score: 51.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f35275f3f65f139bfca1af325e520888 = L.circleMarker(
+                [40.679043, -74.011169],
+                {"bubblingMouseEvents": true, "color": "#ebf500ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ebf500ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_d2767e2a5ebed7eecc1b8233751d6d14 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_678a0ef987c343f39fd07cd507e8fe22 = $(`<div id="html_678a0ef987c343f39fd07cd507e8fe22" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>4169.04</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>44.8</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>40.4</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>48.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>7.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>78.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 50.19 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 4.04 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 207.69 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_d2767e2a5ebed7eecc1b8233751d6d14.setContent(html_678a0ef987c343f39fd07cd507e8fe22);
+            
+        
+
+        circle_marker_f35275f3f65f139bfca1af325e520888.bindPopup(popup_d2767e2a5ebed7eecc1b8233751d6d14)
+        ;
+
+        
+    
+    
+            circle_marker_f35275f3f65f139bfca1af325e520888.bindTooltip(
+                `<div>
+                     4169.04 - Score: 44.8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8629576bc59055754ebb16618dde168 = L.circleMarker(
+                [40.76087502, -74.00277668],
+                {"bubblingMouseEvents": true, "color": "#feff00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feff00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_3f86357bf2518dce34f38ed30ded631a = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_469a3162defbe563ae8338365636e7b6 = $(`<div id="html_469a3162defbe563ae8338365636e7b6" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>6765.01</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>43.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>38.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>39.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>95.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>13.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 22.95 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 3.83 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 133.79 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_3f86357bf2518dce34f38ed30ded631a.setContent(html_469a3162defbe563ae8338365636e7b6);
+            
+        
+
+        circle_marker_d8629576bc59055754ebb16618dde168.bindPopup(popup_3f86357bf2518dce34f38ed30ded631a)
+        ;
+
+        
+    
+    
+            circle_marker_d8629576bc59055754ebb16618dde168.bindTooltip(
+                `<div>
+                     6765.01 - Score: 43.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64208a4ed77ec3064accd008f94aa561 = L.circleMarker(
+                [40.7153379, -74.01658354],
+                {"bubblingMouseEvents": true, "color": "#008000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#008000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_88dde6523e67a9ca72de7a55607b28ff = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ff035c66e3b99d394df8f2a9f376a642 = $(`<div id="html_ff035c66e3b99d394df8f2a9f376a642" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>5297.02</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>61.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>44.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>98.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>28.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 18.47 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 4.42 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 137.61 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_88dde6523e67a9ca72de7a55607b28ff.setContent(html_ff035c66e3b99d394df8f2a9f376a642);
+            
+        
+
+        circle_marker_64208a4ed77ec3064accd008f94aa561.bindPopup(popup_88dde6523e67a9ca72de7a55607b28ff)
+        ;
+
+        
+    
+    
+            circle_marker_64208a4ed77ec3064accd008f94aa561.bindTooltip(
+                `<div>
+                     5297.02 - Score: 61.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c85a9314c14ecadf66d2778263f6f276 = L.circleMarker(
+                [40.73173479, -73.96123901],
+                {"bubblingMouseEvents": true, "color": "#ff2700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff2700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_a3138224543d61f6af0b9783525e1837 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_51834feb87f1d2d7c9a7e2588703dfe2 = $(`<div id="html_51834feb87f1d2d7c9a7e2588703dfe2" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>5794.05</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>28.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>13.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>47.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>61.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>4.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 19.52 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 1.39 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 85.73 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_a3138224543d61f6af0b9783525e1837.setContent(html_51834feb87f1d2d7c9a7e2588703dfe2);
+            
+        
+
+        circle_marker_c85a9314c14ecadf66d2778263f6f276.bindPopup(popup_a3138224543d61f6af0b9783525e1837)
+        ;
+
+        
+    
+    
+            circle_marker_c85a9314c14ecadf66d2778263f6f276.bindTooltip(
+                `<div>
+                     5794.05 - Score: 28.3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_994ae4ae03970e0684c3963a209fc287 = L.circleMarker(
+                [40.70277159, -73.99383605],
+                {"bubblingMouseEvents": true, "color": "#75bb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#75bb00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_c985e17d558e74a0f8c78aa890f4258c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f31a20a06fe7056e7ce8320086b20a5f = $(`<div id="html_f31a20a06fe7056e7ce8320086b20a5f" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>4903.08</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>52.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>19.4</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>62.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>78.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 21.76 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 1.94 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 169.32 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_c985e17d558e74a0f8c78aa890f4258c.setContent(html_f31a20a06fe7056e7ce8320086b20a5f);
+            
+        
+
+        circle_marker_994ae4ae03970e0684c3963a209fc287.bindPopup(popup_c985e17d558e74a0f8c78aa890f4258c)
+        ;
+
+        
+    
+    
+            circle_marker_994ae4ae03970e0684c3963a209fc287.bindTooltip(
+                `<div>
+                     4903.08 - Score: 52.9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb692547e6424a7bb05422a10a0af26e = L.circleMarker(
+                [40.69165183, -73.9999786],
+                {"bubblingMouseEvents": true, "color": "#95ca00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#95ca00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_f2f2e392df90d476650594097e78862b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_82a7e19d35209a8922d5c2aafee205e7 = $(`<div id="html_82a7e19d35209a8922d5c2aafee205e7" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>4614.04</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>50.8</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>42.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>50.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>37.3</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>74.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 28.83 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 4.27 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 141.51 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_f2f2e392df90d476650594097e78862b.setContent(html_82a7e19d35209a8922d5c2aafee205e7);
+            
+        
+
+        circle_marker_bb692547e6424a7bb05422a10a0af26e.bindPopup(popup_f2f2e392df90d476650594097e78862b)
+        ;
+
+        
+    
+    
+            circle_marker_bb692547e6424a7bb05422a10a0af26e.bindTooltip(
+                `<div>
+                     4614.04 - Score: 50.8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ffd5f07c3ff214f7787975a1311d7c9 = L.circleMarker(
+                [40.7692475, -73.9354504],
+                {"bubblingMouseEvents": true, "color": "#ffc800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_6fb5234c6cd9c571f8a118829531905c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_42d154663f8bb243bf32cf3b85dbeac8 = $(`<div id="html_42d154663f8bb243bf32cf3b85dbeac8" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>7003.06</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>39.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>33.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>43.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>12.4</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>46.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 42.46 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 3.31 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 205.86 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_6fb5234c6cd9c571f8a118829531905c.setContent(html_42d154663f8bb243bf32cf3b85dbeac8);
+            
+        
+
+        circle_marker_9ffd5f07c3ff214f7787975a1311d7c9.bindPopup(popup_6fb5234c6cd9c571f8a118829531905c)
+        ;
+
+        
+    
+    
+            circle_marker_9ffd5f07c3ff214f7787975a1311d7c9.bindTooltip(
+                `<div>
+                     7003.06 - Score: 39.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17dd7483b388943ba66a0d78cb1f2b48 = L.circleMarker(
+                [40.71219906, -73.97948148],
+                {"bubblingMouseEvents": true, "color": "#ff8400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8400ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_8e9dca360e4a88edbf5310956711fe5c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0600983de7e5d970248b519baece5b2e = $(`<div id="html_0600983de7e5d970248b519baece5b2e" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>5181.04</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>34.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>16.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>39.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>33.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>72.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 25.21 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 1.66 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 157.67 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_8e9dca360e4a88edbf5310956711fe5c.setContent(html_0600983de7e5d970248b519baece5b2e);
+            
+        
+
+        circle_marker_17dd7483b388943ba66a0d78cb1f2b48.bindPopup(popup_8e9dca360e4a88edbf5310956711fe5c)
+        ;
+
+        
+    
+    
+            circle_marker_17dd7483b388943ba66a0d78cb1f2b48.bindTooltip(
+                `<div>
+                     5181.04 - Score: 34.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be4de8f85f8fbd2bb2dbd7599ccffe63 = L.circleMarker(
+                [40.7298483, -73.97455215],
+                {"bubblingMouseEvents": true, "color": "#f3f900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f3f900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_c42e392f4cc5298a5d8597800044176e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7a296aeb2a1a11bc531c810807afc85e = $(`<div id="html_7a296aeb2a1a11bc531c810807afc85e" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>5769.06</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>44.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>21.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>64.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>50.4</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>64.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 27.15 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 2.10 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 179.17 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_c42e392f4cc5298a5d8597800044176e.setContent(html_7a296aeb2a1a11bc531c810807afc85e);
+            
+        
+
+        circle_marker_be4de8f85f8fbd2bb2dbd7599ccffe63.bindPopup(popup_c42e392f4cc5298a5d8597800044176e)
+        ;
+
+        
+    
+    
+            circle_marker_be4de8f85f8fbd2bb2dbd7599ccffe63.bindTooltip(
+                `<div>
+                     5769.06 - Score: 44.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c7624f86d81db0cab60aead5a494a70 = L.circleMarker(
+                [40.744219, -73.97121214],
+                {"bubblingMouseEvents": true, "color": "#ffbc00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffbc00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_5033786ad6fc049bde5fb445880f9161 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_e24b6b0c162d685755d8be5bc82aa925 = $(`<div id="html_e24b6b0c162d685755d8be5bc82aa925" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>6230.04</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>38.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>26.8</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>47.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>99.4</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>6.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 27.05 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 2.68 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 139.15 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_5033786ad6fc049bde5fb445880f9161.setContent(html_e24b6b0c162d685755d8be5bc82aa925);
+            
+        
+
+        circle_marker_1c7624f86d81db0cab60aead5a494a70.bindPopup(popup_5033786ad6fc049bde5fb445880f9161)
+        ;
+
+        
+    
+    
+            circle_marker_1c7624f86d81db0cab60aead5a494a70.bindTooltip(
+                `<div>
+                     6230.04 - Score: 38.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e37b1b4fb8c5609fa7ed6a03e0e453ad = L.circleMarker(
+                [40.757284, -73.9536],
+                {"bubblingMouseEvents": true, "color": "#ff0000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_dc7dd5b7cf4039774b731dcc6dd51fe0 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4b155864455f8a1f7ac74941573c9e3b = $(`<div id="html_4b155864455f8a1f7ac74941573c9e3b" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>6599.01</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>25.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>14.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>31.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>40.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>28.2</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>78.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 8.33 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 1.40 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 57.28 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_dc7dd5b7cf4039774b731dcc6dd51fe0.setContent(html_4b155864455f8a1f7ac74941573c9e3b);
+            
+        
+
+        circle_marker_e37b1b4fb8c5609fa7ed6a03e0e453ad.bindPopup(popup_dc7dd5b7cf4039774b731dcc6dd51fe0)
+        ;
+
+        
+    
+    
+            circle_marker_e37b1b4fb8c5609fa7ed6a03e0e453ad.bindTooltip(
+                `<div>
+                     6599.01 - Score: 25.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb3bc6f225f3029cf3c22c27146c9d31 = L.circleMarker(
+                [40.70355377, -74.00670227],
+                {"bubblingMouseEvents": true, "color": "#6bb600ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6bb600ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_adc598eb58f550bf8ca278da6450af5d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b57c1c62afb6f918163b0e7afbf9c0d2 = $(`<div id="html_b57c1c62afb6f918163b0e7afbf9c0d2" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>4953.04</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>53.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>35.9</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>100.0</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>9.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>86.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 31.08 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 3.59 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 177.61 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_adc598eb58f550bf8ca278da6450af5d.setContent(html_b57c1c62afb6f918163b0e7afbf9c0d2);
+            
+        
+
+        circle_marker_fb3bc6f225f3029cf3c22c27146c9d31.bindPopup(popup_adc598eb58f550bf8ca278da6450af5d)
+        ;
+
+        
+    
+    
+            circle_marker_fb3bc6f225f3029cf3c22c27146c9d31.bindTooltip(
+                `<div>
+                     4953.04 - Score: 53.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e69eb9952577fa1e8c21e7cd23055b4 = L.circleMarker(
+                [40.719876, -73.963865],
+                {"bubblingMouseEvents": true, "color": "#ffc800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_11889b986486d520facd78fd2c2da336);
+        
+    
+        var popup_219118505a23e9abc79aba4a36bae5f0 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0d5a2d3639a56b9503f311f72a885f7f = $(`<div id="html_0d5a2d3639a56b9503f311f72a885f7f" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial, sans-serif; padding: 10px;'>                 <h3 style='color: #2c3e50; margin-bottom: 10px;'>5458.02</h3>                 <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Scores:</h4>                     <table style='width: 100%; border-collapse: collapse;'>                         <tr>                             <td style='padding: 5px;'><b>Total Score:</b></td>                             <td style='padding: 5px;'>39.5</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Bike Lane Score:</b></td>                             <td style='padding: 5px;'>13.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>POI Score:</b></td>                             <td style='padding: 5px;'>84.7</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Network Score:</b></td>                             <td style='padding: 5px;'>93.1</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Green Space Score:</b></td>                             <td style='padding: 5px;'>14.6</td>                         </tr>                         <tr>                             <td style='padding: 5px;'><b>Capacity Score:</b></td>                             <td style='padding: 5px;'>90.0</td>                         </tr>                     </table>                 </div>                 <div style='margin-top: 10px;'>                     <h4 style='color: #34495e; margin-bottom: 5px;'>Infrastructure Metrics:</h4>                     <p>Bike Lane Density: 21.58 miles/sq_mile</p>                     <p>Weighted Bike Lane Density: 1.31 miles/sq_mile</p>                     <p>Intersection Density: 0.00 intersections/m²</p>                     <p>Network Density: 130.40 miles/sq_mile</p>                 </div>             </div>             </div>`)[0];
+                popup_219118505a23e9abc79aba4a36bae5f0.setContent(html_0d5a2d3639a56b9503f311f72a885f7f);
+            
+        
+
+        circle_marker_6e69eb9952577fa1e8c21e7cd23055b4.bindPopup(popup_219118505a23e9abc79aba4a36bae5f0)
+        ;
+
+        
+    
+    
+            circle_marker_6e69eb9952577fa1e8c21e7cd23055b4.bindTooltip(
+                `<div>
+                     5458.02 - Score: 39.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_11889b986486d520facd78fd2c2da336.addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+        
+    
+            var tile_layer_814672a4277dc4dd240ef99c562d023c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_0d261f694fed69acda66867b884261cc = new L.Control.MiniMap(
+                tile_layer_814672a4277dc4dd240ef99c562d023c,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": false,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_a9eb0ca9d6beb2c7377eb5a9d754a524.addControl(mini_map_0d261f694fed69acda66867b884261cc);
+        
+    
+            var layer_control_a014e2df29a8d3e7d6b42cb8b7e4bd79_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a9891b3715a0a60a878febd14e9145f3,
+                    "cartodbpositron" : tile_layer_606d7ea11e7811f96c844594e94e20e2,
+                    "cartodbdarkmatter" : tile_layer_c1c7f9f582cf3eec0b184f4a77e40675,
+                },
+                overlays :  {
+                    "Station Markers" : feature_group_11889b986486d520facd78fd2c2da336,
+                },
+            };
+            let layer_control_a014e2df29a8d3e7d6b42cb8b7e4bd79 = L.control.layers(
+                layer_control_a014e2df29a8d3e7d6b42cb8b7e4bd79_layers.base_layers,
+                layer_control_a014e2df29a8d3e7d6b42cb8b7e4bd79_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_a9eb0ca9d6beb2c7377eb5a9d754a524);
+
+        
+</script>
+</html>
