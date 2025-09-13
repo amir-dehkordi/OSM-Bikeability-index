@@ -45,7 +45,4 @@ The project requires the following Python packages:
 ## Analysis Metrics
 The final bikeability score is a weighted aggregation of the normalized factors listed above. Each component is individually normalized to a 0-100 scale, using empirically determined constants to define optimal thresholds. The combined weighted sum provides a comprehensive index, with higher weights typically assigned to factors such as dedicated bike infrastructure and accessibility to key destinations, reflecting their strong influence on cycling behavior.
 
-## Contributing
-
-Feel free to submit issues and enhancement requests!
  
